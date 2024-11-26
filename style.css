@@ -1,0 +1,244 @@
+/* Import the custom fonts */
+@font-face {
+    font-family: 'game';
+    src: url('game-stage-game-stage-regular-400.ttf') format('truetype');
+}
+
+/* General Styles */
+body {
+    font-family: 'game', sans-serif;
+    background-image: url('backgroundsts.png'); /* Check this file path */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Title Styles */
+.title {
+    font-family: 'game', sans-serif;
+    font-size: 36px;
+    margin-top: 40px;
+    color: #69ff69b7; /* Green color for the title */
+   
+    text-shadow: 
+        4px 4px 0px #0c4b11b7,   /* Right bottom */
+        -4px 4px 0px #0c4b11b7,  /* Left bottom */
+        4px -4px 0px #0c4b11b7,  /* Right top */
+        -4px -4px 0px #0c4b11b7; /* Left top */
+
+ 
+}
+.yay {
+    font-family: 'game', sans-serif;
+    font-size: 50px;
+    margin-top: 75px;
+    color: #69ff69b7; /* Green color for the title */
+   
+    text-shadow: 
+        4px 4px 0px #0c4b11b7,   /* Right bottom */
+        -4px 4px 0px #0c4b11b7,  /* Left bottom */
+        4px -4px 0px #0c4b11b7,  /* Right top */
+        -4px -4px 0px #0c4b11b7; /* Left top */
+}
+.subtitle {
+    font-family: 'game', sans-serif;
+    font-size: 20px;
+    margin-top: 25px;
+    color: #0aff0aea; /* Green color for the title */
+   
+
+
+}
+
+.isi {
+    font-family: 'game', sans-serif;
+    font-size: 20px;
+    margin-top: 25px;
+    color: #000000b7; /* Green color for the title */
+   
+
+
+}
+/* Progress Bar */
+.progress-container {
+    width: 100%;
+    background-color: #ddd;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 5px;
+    background-color: #4caf50;
+}
+
+/* Section Styles */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* Image Gallery */
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px; /* Add space between the gallery and buttons */
+}
+
+/* Hover Image */
+.hover-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.hover-img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(130, 255, 105, 0.8);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    color: #333;
+}
+
+.modal-image {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+}
+
+/* Streamer Styles */
+.streamer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* So streamers don’t interfere with buttons */
+    z-index: 999;
+    display: none; /* Hidden initially */
+}
+
+.streamer {
+    position: absolute;
+    width: 5px;
+    height: 100vh; /* Streamers fall the full height of the viewport */
+    background-color: red; /* You can change the color */
+    opacity: 0.8;
+    animation: fall 4s linear infinite, wave 4s ease-in-out infinite;
+}
+
+
+
+/* Streamer Container */
+.streamer-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Streamers won’t interfere with interaction */
+    z-index: 999;
+    display: none; /* Hidden initially */
+}
+
+.streamer {
+    position: absolute;
+    width: 5px;
+    height: 100vh; /* Streamers fall the full height of the viewport */
+    overflow: hidden;
+    opacity: 0.8;
+    animation: fall 3s linear infinite; /* Only falling motion here */
+}
+
+/* Inner streamer (this will rotate/wave) */
+.streamer-inner {
+    width: 100%;
+    height: 100%;
+    background-color: red; /* You can change the color */
+    animation: wave 2s ease-in-out infinite; /* Only waving/rotation here */
+}
+
+/* Falling Animation */
+@keyframes fall {
+    0% {
+        transform: translateY(-100%); /* Start above the viewport */
+    }
+    100% {
+        transform: translateY(100vh); /* End at the bottom of the viewport */
+    }
+}
+
+/* Waving Animation */
+@keyframes wave {
+    0%, 100% {
+        transform: rotate(0deg); /* Start with no rotation */
+    }
+    50% {
+        transform: rotate(50deg); /* Slight rotation for waving effect */
+    }
+}
+
+
+/* Button Styles */
+.next-button, .celebrate-button, .answer-button {
+    padding: 15px 30px;
+    background-color: #45a049;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-family: 'game';
+    margin: 10px;
+}
+
+.next-button:hover, .celebrate-button:hover, .answer-button:hover {
+    background-color: #0a4614;
+}
+
+/* Quiz Styles */
+#lives-container {
+    margin: 20px;
+    font-size: 2em;
+}
