@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safe Internet Use</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Progress Bar -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+    <!-- Section 1: Introduction with Images -->
+    <section class="section" id="section1">
+        <h1 class="title"> Welcome to Safe Internet Use</h1>
+        <p class="isi">The internet is a vast place full of resources, but it also has its dangers. In this learning module, you will explore the best practices for keeping yourself safe online.</p>
+        <p><strong class="subtitle">What to Do:</strong >  Always be cautious about what you share online and stay informed about internet security.</p>
+        <p><strong class="subtitle">What Not to Do:</strong > Don't click on suspicious links or share personal information with strangers. You can never know what they are up to.</p>
+        
+        <!-- Images with hover and click functionality -->
+        <div class="image-gallery">
+            <img src="phone.jpg" alt="Phone" class="hover-img" onclick="openModal('phoneModal')">
+            <img src="computer.jpg" alt="Computer" class="hover-img" onclick="openModal('computerModal')">
+            <img src="social_media.jpeg" alt="Social Media" class="hover-img" onclick="openModal('socialMediaModal')">
+        </div>
+ <!-- Buttons with spacing -->
+ <div class="button-container">
+        <button class="next-button" onclick="unlockSection(2)" >Next Section</button>
+ </div>
+    </section>
+
+    <!-- Section 2: Password Safety -->
+    <section class="section" id="section2" style="display: none;">
+        <h1 class="title">Password Safety</h1>
+        <p class="isi">Passwords are the first line of defense against unauthorized access to your accounts. A good password is strong, unique, and hard to guess.</p>
+        <p><strong class="subtitle">What to Do:</strong class="isi">  Use a combination of upper and lowercase letters, numbers, and special characters for your passwords. Consider using a password manager to keep track of them. This will make it harder for hackers to break into your accounts.</p>
+        <p><strong class="subtitle">What Not to Do:</strong class="isi"> Don’t use easily guessable passwords like “12345” or “password” and don’t reuse passwords across different accounts. If you do, hackers can easily hack into multiple of your accounts.</p>
+        
+        <!-- Images with hover and click functionality -->
+        <div class="image-gallery">
+            <img src="password.png" alt="Password" class="hover-img" onclick="openModal('passwordModal')">
+            <img src="password_manager.jpg" alt="Password Manager" class="hover-img" onclick="openModal('passwordManagerModal')">
+        </div>
+
+  <!-- Buttons with spacing -->
+  <div class="button-container">
+        <button class="next-button" onclick="unlockSection(3)">Next Section</button>
+  </div>
+    </section>
+
+    <!-- Section 3: Social Media Safety -->
+    <section class="section" id="section3" style="display: none;">
+        <h1 class="title">Social Media Safety</h1>
+        <p class="isi">Social media is a fun way to connect with friends and family, but it can also expose you to risks if you're not careful about your privacy settings.</p>
+        <p><strong class="subtitle">What to Do:</strong class="isi"> Use privacy settings to control who can see your posts and only accept friend requests from people you know. U can never know what information people can get just from your posts. Like your current location, time, and even your adress.</p>
+        <p><strong class="subtitle">What Not to Do:</strong class="isi"> Don’t share sensitive information like your address, phone number, or financial details on social media. Or else people can commit identity fraud and much more.</p>
+        
+        <!-- Images with hover and click functionality -->
+        <div class="image-gallery">
+            <img src="privacy_settings.jpeg" alt="Privacy Settings" class="hover-img" onclick="openModal('privacyModal')">
+            <img src="socialsharing.jpg" alt="Sharing" class="hover-img" onclick="openModal('sharingModal')">
+        </div>
+
+          <!-- Buttons with spacing -->
+          <div class="button-container">
+        <button class="next-button" onclick="unlockSection(4)">Next Section</button>
+          </div>
+    </section>
+
+    <!-- Section 4: Online Scams -->
+    <section class="section" id="section4" style="display: none;">
+        <h1 class="title">Avoiding Online Scams</h1>
+        <p class="isi">Scammers often use the internet to trick people into giving up their personal information or money. These scams can come in the form of phishing emails, fake websites, or fraudulent offers.</p>
+        <p><strong class="subtitle">What to Do:</strong class="isi"> Be skeptical of unsolicited emails or messages asking for your personal information, and verify websites before making purchases. It would be best to delete, ignore, and report these emails.</p>
+        <p><strong class="subtitle">What Not to Do:</strong class="isi"> Don’t click on links or download attachments from unknown sources. It is better to delete and report them.</p>
+        
+        <!-- Images with hover and click functionality -->
+        <div class="image-gallery">
+            <img src="scam_email.jpg" alt="Scam Email" class="hover-img" onclick="openModal('scamEmailModal')">
+            <img src="fake_website.jpg" alt="Fake Website" class="hover-img" onclick="openModal('fakeWebsiteModal')">
+        </div>
+
+          <!-- Buttons with spacing -->
+          <div class="button-container">
+        <button class="next-button" onclick="unlockSection(5)">Start Quiz</button>
+          </div>
+    </section>
+
+    <!-- Modals for image details -->
+    <!-- Section 1 Modals -->
+    <div id="phoneModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('phoneModal')">&times;</span>
+            <h2 class="title">History of the Phone</h2>
+            <p>The telephone was invented by Alexander Graham Bell in 1876. Back then, people had to send letters to comunicate to far places and it might take months to get a response! The Telephone revolutionized long-distance communication.</p>
+            <img src="phone.jpg" alt="Phone" class="modal-image">
+        </div>
+    </div>
+
+    <div id="computerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('computerModal')">&times;</span>
+            <h2 class="title">History of the Computer</h2>
+            <p>Computers were first developed in the mid-20th century. They have transformed industries, economies, and daily life.</p>
+            <img src="computer.jpg" alt="Computer" class="modal-image">
+        </div>
+    </div>
+
+    <div id="socialMediaModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('socialMediaModal')">&times;</span>
+            <h2 class="title">The Rise of Social Media</h2>
+            <p>Social media platforms like Facebook, Twitter, and Instagram have changed how we communicate and share information globally.</p>
+            <img src="social_media.jpeg" alt="Social Media" class="modal-image">
+        </div>
+    </div>
+
+    <!-- Section 2 Modals -->
+    <div id="passwordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('passwordModal')">&times;</span>
+            <h2 class="title">Importance of Strong Passwords</h2>
+            <p>Strong passwords use a combination of letters, numbers, and symbols, making it difficult for hackers to guess.</p>
+            <img src="password.png" alt="Password" class="modal-image">
+        </div>
+    </div>
+
+    <div id="passwordManagerModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('passwordManagerModal')">&times;</span>
+            <h2 class="title">Benefits of Using a Password Manager</h2>
+            <p>Password managers help you store complex passwords securely, so you don’t have to remember them all.</p>
+            <img src="password_manager.jpg" alt="Password Manager" class="modal-image">
+        </div>
+    </div>
+
+    <!-- Section 3 Modals -->
+    <div id="privacyModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+            <h2 class="title">Using Privacy Settings</h2>
+            <p>Privacy settings allow you to control who sees your posts and personal information on social media so it doesn't go into the wrong hands.</p>
+            <img src="privacy_settings.jpeg" alt="Privacy Settings" class="modal-image">
+        </div>
+    </div>
+
+    <div id="sharingModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sharingModal')">&times;</span>
+            <h2 class="title">What to Share Online</h2>
+            <p>Be careful about what you share online. Avoid posting sensitive information that could be used to harm you.</p>
+            <img src="socialsharing.jpg" alt="Social Sharing" class="modal-image">
+        </div>
+    </div>
+
+    <!-- Section 4 Modals -->
+    <div id="scamEmailModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('scamEmailModal')">&times;</span>
+            <h2 class="title">Recognizing Scam Emails</h2>
+            <p>Scam emails often ask for personal information and contain suspicious links. These emails are used to steal your money, or worse hack you. Delete them immediately.</p>
+            <img src="scam_email.jpg" alt="Scam Email" class="modal-image">
+        </div>
+    </div>
+
+    <div id="fakeWebsiteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('fakeWebsiteModal')">&times;</span>
+            <h2 class="title">Avoiding Fake Websites</h2>
+            <p>Always verify the authenticity of websites before entering any personal information or making purchases pr else you will end up having spent your money on a piece of junk, or not even getting anything at all!</p>
+            <img src="fake_website.jpg" alt="Fake Website" class="modal-image">
+        </div>
+    </div>
+    <!-- Section 5: Quiz Section -->
+    <section class="section" id="section5" style="display: none;">
+        <h1 class="title">Final Quiz: Test Your Knowledge</h1>
+        <p>You now have 3 lives! Answer the questions correctly to finish the course. If you lose all your lives, you will have to start over and reread the sections.</p>
+        <div id="lives-container">
+            <span id="lives">❤️❤️❤️</span>
+        </div>
+
+        <!-- Quiz Question Container -->
+        <div class="quiz">
+            <p id="question">What should you do to keep your password safe?</p>
+            <button class="answer-button" onclick="checkAnswer(true)">Use long, complex passwords</button>
+            <button class="answer-button" onclick="checkAnswer(false)">Share it with friends</button>
+        </div>
+    </section>
+
+  
+    <!-- Section 6: Congratulations -->
+    <section class="section" id="section6" style="display: none;">
+        <h1 class="yay">Congratulations!</h1>
+        <p class="subtitle">You have successfully completed the Safe Internet Use course!</p>
+        
+          <!-- Button to trigger streamers -->
+          <button class="celebrate-button" onclick="triggerStreamers()">Celebrate 🎉</button>
+        
+          <!-- Streamers for Celebration -->
+          <div class="streamer-container" id="streamerContainer"></div>
+      </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
